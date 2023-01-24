@@ -4,7 +4,7 @@ Created on Thu Jan 19 16:35:11 2023
 
 @author: Alexis
 
-Sorry, I know this code isn't very efficient I will update it later to make it look better :) for now it works haha
+This is the intial version
 """
 import pandas as pd
 import numpy as np
