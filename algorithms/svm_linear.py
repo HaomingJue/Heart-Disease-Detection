@@ -2,6 +2,7 @@ from sklearn import svm
 
 class SVMLinear:
     def __init__(self, C = 0.5, label = 'SVM linear'):
+        self.name = "SVMLinear"
         self.kernal = 'linear'
         self.C = C
         self.label = label + f' ,C = {self.C}'

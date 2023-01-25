@@ -18,8 +18,9 @@ from collections import Counter
 
 class DecisionTree:
     def __init__(self, max_depth = 4, label = 'Decision Tree'):
+        self.name = "DecisionTree"
         self.max_depth = max_depth
-        self.label = label + f' ,max depth = self.max_depth'
+        self.label = label + f' ,max depth = {self.max_depth}'
     
     def get_label(self):
         return self.label

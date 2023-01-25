@@ -6,6 +6,7 @@ class KNN:
         Default settings:
         p=2 makes it euclidean distance
         '''
+        self.name = "KNN"
         self.k = k
         self.p = p
         self.label = label

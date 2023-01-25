@@ -3,6 +3,7 @@ from sklearn.naive_bayes import GaussianNB
 
 class NaiveBayes:
     def __init__(self, label = 'Naive Bayes'):
+        self.name = "NaiveBayes"
         self.label = label
     
     def get_label(self):

@@ -7,6 +7,7 @@ class NN:
         Default settings:
         p=2 makes it euclidean distance
         '''
+        self.name = "NN"
         self.p = p
         self.label = label
     

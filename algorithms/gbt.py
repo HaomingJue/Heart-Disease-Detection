@@ -2,6 +2,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 class GBT:
     def __init__(self, label = 'Gradient Boosted Decision Trees'):
+        self.name = "GBT"
         self.label = label
     
     def get_label(self):

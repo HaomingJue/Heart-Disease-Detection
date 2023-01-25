@@ -2,6 +2,7 @@ from sklearn import svm
 
 class SVMRBF:
     def __init__(self, C = 0.5, gamma = 1, label = 'SVM, RBF'):
+        self.name = "SVMRBF"
         self.kernal = 'rbf'
         self.C = C
         self.gamma = gamma

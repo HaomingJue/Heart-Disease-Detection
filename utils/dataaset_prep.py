@@ -75,6 +75,6 @@ def prepare_dataset(train_id):
         ax.legend(loc= 'upper right', labels=['Sick', 'Healthy'])
         fig.tight_layout()
         
-    fig.savefig("Class Distribution")
+    fig.savefig(f"results/{train_id}/figures/Class Distribution")
 
     return X_train, X_test, y_train, y_test
