@@ -1,5 +1,5 @@
 import joblib
-from utils.dataaset_prep import prepare_dataset
+from utils.dataset_prep import prepare_dataset
 from utils.folder_prep import prepare_folder
 from datetime import datetime
 
