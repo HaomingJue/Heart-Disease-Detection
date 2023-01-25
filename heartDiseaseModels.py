@@ -5,7 +5,10 @@ Created on Thu Jan 19 16:35:11 2023
 @author: Alexis
 
 This is the intial version
+test
 """
+import pickle
+import joblib
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -177,6 +180,13 @@ fpr, tpr, _ = metrics.roc_curve(y_test, y_pred_gbt)
 auc = round(metrics.roc_auc_score(y_test, y_pred_gbt), 4)
 scores = cross_val_score(gbt, X_train, y_train, cv=5)
 plt.plot(fpr,tpr,label="Gradient Boosted Decision Trees, Average Accuracy: ="+str(scores.mean())+"+/-"+str(scores.std()),linewidth=0.5)
+
+filename = 'model.joblib'
+joblib.dump(gbt, open(filename, 'wb'))
+
+with open('model.pkl', 'wb') as f:
+    pickle.dump(gbt, f)
+
     
 plt.legend()
 plt.ylabel('True Positive Rate')
