@@ -1,14 +1,14 @@
+from sklearn.ensemble import BaggingClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn import svm
+from sklearn.ensemble import GradientBoostingClassifier
 
 
-class NN:
-    def __init__(self, p = 2, label = 'NN, euclidean distance'):
-        '''
-        Default settings:
-        p=2 makes it euclidean distance
-        '''
-        self.name = "NN"
-        self.p = p
+class Bagged:
+    def __init__(self, label = 'Bagging Classifier'):
+        self.name = "Bagging"
         self.label = label
     
     def get_label(self):
@@ -18,6 +18,5 @@ class NN:
         self.label = label
     
     def generate_model(self, X_train, y_train):
-        return KNeighborsClassifier(n_neighbors=1, p=self.p).fit(X_train,y_train)
+        return BaggingClassifier(GaussianNB(), n_estimators=10, random_state=0).fit(X_train, y_train)
     
-        

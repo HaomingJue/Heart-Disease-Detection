@@ -8,9 +8,11 @@ from algorithms.decision_tree import DecisionTree
 from algorithms.gbt import GBT
 from algorithms.knn import KNN
 from algorithms.naive_bayes import NaiveBayes
-from algorithms.nn import NN
+from algorithms.nn import Bagged
 from algorithms.svm_linear import SVMLinear
 from algorithms.svm_rbf import SVMRBF
+from algorithms.stack import Stacked
+from algorithms.xgb import XGB
 
 
 from sklearn.model_selection import cross_val_score
@@ -37,9 +39,12 @@ gbt = GBT()
 decision_tree = DecisionTree()
 knn = KNN()
 naive_bayes = NaiveBayes()
-nn = NN()
+nn = Bagged()
 svm_linear = SVMLinear()
 svm_rbf = SVMRBF()
+stacking = Stacked()
+xgb = XGB()
+
 
 algorithm_list.append(svm_rbf)
 algorithm_list.append(svm_linear)
@@ -48,7 +53,8 @@ algorithm_list.append(naive_bayes)
 algorithm_list.append(knn)
 algorithm_list.append(decision_tree)
 algorithm_list.append(gbt)
-
+algorithm_list.append(stacking)
+algorithm_list.append(xgb)
 
 
 plt.figure(0).clf()
